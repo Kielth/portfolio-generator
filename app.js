@@ -126,6 +126,162 @@ Add a New Project
     });
 };
 
+const pageHTML = generatePage(mockData);
+
+const mockData = {
+  name: 'Tara Evans',
+  github: 'tarajevans',
+  confirmAbout: true,
+  about:
+    'I am currently powering thru the Fullstack Coding Bootcamp at Carleton University.  I am at the halfway point with an end date in mid November 2022.  I have completed all of the front end developing modules which include HTML, HTML5, CSS, advanced CSS, Git and Github, JavaScript, jQuery, Bootstrap, Web Apis, Third-Party Apis and Server-Side Apis.  I am currently working on back-end developing, having completed Nodejs, OOP, Express and MySQL',
+  projects: [
+    {
+      name: 'Weather App',
+      description:
+        'An app that allows the user to search ',
+      languages: ['HTML', 'CSS', 'JavaScript','jQuery','Bootstrap'],
+      link: 'https://github.com/tarajevans/weather-app',
+      feature: true,
+      confirmAddProject: true
+    },
+    {
+      name: 'Coffee Break',
+      description:
+        'Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et. Nam fringilla elit dapibus pellentesque cursus.',
+      languages: ['JavaScript', 'HTML', 'CSS'],
+      link: 'https://github.com/lernantino/taskinator',
+      feature: true,
+      confirmAddProject: true
+    },
+    {
+      name: 'Portfolio',
+      description:
+        'Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et. Nam fringilla elit dapibus pellentesque cursus.',
+      languages: ['JavaScript', 'jQuery', 'CSS', 'HTML', 'Bootstrap'],
+      link: 'https://github.com/lernantino/taskmaster-pro',
+      feature: false,
+      confirmAddProject: true
+    },
+    {
+      name: 'Scheduled Chaos',
+      description:
+        'Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque.',
+      languages: ['JavaScript'],
+      link: 'https://github.com/lernantino/robot-gladiators',
+      feature: false,
+      confirmAddProject: false
+    },
+    {
+      name: 'Code Quiz',
+      description:
+        'Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et. Nam fringilla elit dapibus pellentesque cursus.',
+      languages: ['HTML', 'CSS'],
+      link: 'https://github.com/lernantino/run-buddy',
+      feature: true,
+      confirmAddProject: true
+    },
+    {
+      name: 'Password Generator',
+      description:
+        'Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et. Nam fringilla elit dapibus pellentesque cursus.',
+      languages: ['JavaScript', 'HTML', 'CSS'],
+      link: 'https://github.com/lernantino/taskinator',
+      feature: true,
+      confirmAddProject: true
+    },
+    {
+      name: 'Taskinator',
+      description:
+        'Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et. Nam fringilla elit dapibus pellentesque cursus.',
+      languages: ['JavaScript', 'jQuery', 'CSS', 'HTML', 'Bootstrap'],
+      link: 'https://github.com/lernantino/taskmaster-pro',
+      feature: false,
+      confirmAddProject: true
+    },
+    {
+      name: 'Git It Done',
+      description:
+        'Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque.',
+      languages: ['JavaScript'],
+      link: 'https://github.com/lernantino/robot-gladiators',
+      feature: false,
+      confirmAddProject: false
+    },
+    {
+      name: 'Taskmaster Pro',
+      description:
+        'Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et. Nam fringilla elit dapibus pellentesque cursus.',
+      languages: ['HTML', 'CSS'],
+      link: 'https://github.com/lernantino/run-buddy',
+      feature: true,
+      confirmAddProject: true
+    },
+    {
+      name: 'Robot Gladiators',
+      description:
+        'Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et. Nam fringilla elit dapibus pellentesque cursus.',
+      languages: ['JavaScript', 'HTML', 'CSS'],
+      link: 'https://github.com/lernantino/taskinator',
+      feature: true,
+      confirmAddProject: true
+    },
+    {
+      name: 'Run Buddy',
+      description:
+        'Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et. Nam fringilla elit dapibus pellentesque cursus.',
+      languages: ['JavaScript', 'jQuery', 'CSS', 'HTML', 'Bootstrap'],
+      link: 'https://github.com/lernantino/taskmaster-pro',
+      feature: false,
+      confirmAddProject: true
+    },
+    {
+      name: 'Horiseon',
+      description:
+        'Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque.',
+      languages: ['JavaScript'],
+      link: 'https://github.com/lernantino/robot-gladiators',
+      feature: false,
+      confirmAddProject: false
+    },
+    {
+      name: 'Run Buddy',
+      description:
+        'Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et. Nam fringilla elit dapibus pellentesque cursus.',
+      languages: ['HTML', 'CSS'],
+      link: 'https://github.com/lernantino/run-buddy',
+      feature: true,
+      confirmAddProject: true
+    },
+    {
+      name: 'Taskinator',
+      description:
+        'Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et. Nam fringilla elit dapibus pellentesque cursus.',
+      languages: ['JavaScript', 'HTML', 'CSS'],
+      link: 'https://github.com/lernantino/taskinator',
+      feature: true,
+      confirmAddProject: true
+    },
+    {
+      name: 'Taskmaster Pro',
+      description:
+        'Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque. Nulla eget fringilla nulla. Integer gravida magna mi, id efficitur metus tempus et. Nam fringilla elit dapibus pellentesque cursus.',
+      languages: ['JavaScript', 'jQuery', 'CSS', 'HTML', 'Bootstrap'],
+      link: 'https://github.com/lernantino/taskmaster-pro',
+      feature: false,
+      confirmAddProject: true
+    },
+    {
+      name: 'Robot Gladiators',
+      description:
+        'Duis consectetur nunc nunc. Morbi finibus non sapien nec pharetra. Fusce nec dignissim orci, ac interdum ipsum. Morbi mattis justo sed commodo pellentesque.',
+      languages: ['JavaScript'],
+      link: 'https://github.com/lernantino/robot-gladiators',
+      feature: false,
+      confirmAddProject: false
+    }
+  ]
+};
+
 promptUser()
   .then(promptProject)
   .then(portfolioData => {
@@ -144,3 +300,5 @@ promptUser()
   .catch(err => {
     console.log(err);
   });
+
+  //const pageHTML = generatePage(mockData);
